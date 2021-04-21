@@ -57,7 +57,8 @@
     maxZoom: 25
   });
 	    var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+		    maxZoom: 25
 });
 
 
@@ -66,7 +67,7 @@
 var map = L.map('map', {
         center: [ 41.11775360340815, 16.42727795424692 ], //map loads with this location as center
         zoom: 8,
-	maxZoom: 25,
+	maxZoom: 19,
         layers: [osm] // Show 'streets' by default
 });
 // Add the 'layers' control
