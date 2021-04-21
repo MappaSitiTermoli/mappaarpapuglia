@@ -89,20 +89,20 @@ var markers = L.markerClusterGroup({disableClusteringAtZoom: 16});
     for (var i in data) {
       var row = data[i];
 	    var colorebande;
-  if( row.gestore == "ILIAD") {  colorebande = "brown";
+  if( row.gestore == "Iliad Italia s.p.a") {  colorebande = "brown";
        iconemarker = L.icon({
     iconUrl: 'iliad.png',
    iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
-}); } else if (row.gestore == "TIM") {  colorebande = "blue";
+}); } else if (row.gestore == "Telecom Italia S.p.A.") {  colorebande = "blue";
   iconemarker = L.icon({
     iconUrl: 'tim.png',
    iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
 });
-} else if( row.gestore == "VODAFONE")  {  colorebande = "red";
+} else if( row.gestore == "Vodafone Italia S.p.A.")  {  colorebande = "red";
        iconemarker = L.icon({
     iconUrl: 'vodafone.png',
    iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
-}); } else if( row.gestore == "WIND3") {  colorebande = "orange";
+}); } else if( row.gestore == "Wind Tre s.p.a.") {  colorebande = "orange";
        iconemarker = L.icon({
     iconUrl: 'windtre.png',
    iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
