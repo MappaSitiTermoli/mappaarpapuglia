@@ -121,8 +121,8 @@ var markers = L.markerClusterGroup({disableClusteringAtZoom: 20});
     iconUrl: 'default.png',
    iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
 }); }
-      var marker = L.marker([row.latitude, row.longitude], {icon: iconemarker}).bindPopup("<b>LATITUDINE,LONGITUDINE:</b> " + row.latitude + "," + row.longitude + "<br /><b>LATITUDINE:</b> " + row.latitude + "<br /><b>LONGITUDINE:</b> " + row.longitude + "<br /><b>CODICE ID:</b> " + row.id + "<br /><b>INDIRIZZO:</b> " + row.indirizzo + "," + row.comune_ok + "<br /><b>GESTORE:</b> "  +row.gestore.fontcolor(colorebande) + "<br />").openPopup();
-      marker.bindTooltip("<span>" + row.id + " - " + row.gestore + "</span>" , {permanent: true, direction: 'bottom'}).openTooltip();
+      var marker = L.marker([row.latitude, row.longitude], {icon: iconemarker}).bindPopup("<b>LATITUDINE,LONGITUDINE:</b> " + row.latitude + "," + row.longitude + "<br /><b>LATITUDINE:</b> " + row.latitude + "<br /><b>LONGITUDINE:</b> " + row.longitude + "<br /><b>CODICE ID:</b> " + row.id + "<br /><b>INDIRIZZO:</b> " + row.indirizzo + "," + row.comune_ok + "<br /><b>GESTORE:</b>"  + row.gestore.fontcolor(colorebande) + "<br />").openPopup();
+      marker.bindTooltip("<span>" + row.id + " - " + row.gestore.fontcolor(colorebande) + "</span>" , {permanent: true, direction: 'bottom'}).openTooltip();
 	    
    markers.addLayer(marker); //Aggiungo il layer della mappa a quello dei cluster
 
