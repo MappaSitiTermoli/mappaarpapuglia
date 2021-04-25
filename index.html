@@ -90,7 +90,7 @@ var markers = L.markerClusterGroup({disableClusteringAtZoom: 20});
     // For each row, columns `latitudeitude`, `longitudegitude`, and `Title` are required
     for (var i in data) {
       var row = data[i];
-	    var colorebande;
+      var colorebande;
   if( row.gestore == "Iliad Italia s.p.a") {  colorebande = "brown";
        iconemarker = L.icon({
     iconUrl: 'iliad.png',
@@ -113,7 +113,7 @@ var markers = L.markerClusterGroup({disableClusteringAtZoom: 20});
     iconUrl: 'default.png',
    iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
 }); }
-      var marker = L.marker([row.latitude, row.longitude], {icon: iconemarker}).bindPopup("<b>LATITUDINE,LONGITUDINE:</b> " + row.latitude + "," + row.longitude + "<br /><b>LATITUDINE:</b> " + row.latitude + "<br /><b>LONGITUDINE:</b> " + row.longitude + "<br /><b>CODICE ID:</b> " + row.id + "<br /><b>INDIRIZZO:</b> " +row.indirizzo + "," + row.comune_ok + "<br /><b>GESTORE:</b> " +row.gestore.fontcolor(colorebande)+ "<br />").openPopup();
+      var marker = L.marker([row.latitude, row.longitude], {icon: iconemarker}).bindPopup("<b>LATITUDINE,LONGITUDINE:</b> " + row.latitude + "," + row.longitude + "<br /><b>LATITUDINE:</b> " + row.latitude + "<br /><b>LONGITUDINE:</b> " + row.longitude + "<br /><b>CODICE ID:</b> " + row.id + "<br /><b>INDIRIZZO:</b> " + row.indirizzo + "," + row.comune_ok + "<br /><b>GESTORE:</b> "  +row.gestore.fontcolor(colorebande) + "<br />").openPopup();
       marker.bindTooltip("<span>" + row.id + " - " + row.gestore + "</span>" , {permanent: true, direction: 'bottom'}).openTooltip();
 	    
    markers.addLayer(marker); //Aggiungo il layer della mappa a quello dei cluster
@@ -148,7 +148,7 @@ var searchControl = new L.esri.Controls.Geosearch().addTo(map);
               searchControl.on('results', function(data){
                 results.clearLayers();
                 for (var i = data.results.length - 1; i >= 0; i--) {
-                  results.addLayer(L.marker(data.results[i].latitudelng ,  {icon: searchicon}).bindPopup(btn, {
+                  results.addLayer(L.marker(data.results[i].latlng ,  {icon: searchicon}).bindPopup(btn, {
   maxWidth: 'auto'
 })),map.addLayer(results);
                 }
