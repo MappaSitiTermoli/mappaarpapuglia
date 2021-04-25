@@ -91,8 +91,7 @@ var markers = L.markerClusterGroup({disableClusteringAtZoom: 20});
     for (var i in data) {
       var row = data[i];
       var colorebande;
-      var fontcolor;
-  if( row.gestore == "Iliad Italia s.p.a") {  colorebande = "brown";
+      if( row.gestore == "Iliad Italia s.p.a") {  colorebande = "brown";
        iconemarker = L.icon({
     iconUrl: 'iliad.png',
    iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
