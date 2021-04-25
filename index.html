@@ -108,6 +108,14 @@ var markers = L.markerClusterGroup({disableClusteringAtZoom: 20});
        iconemarker = L.icon({
     iconUrl: 'windtre.png',
    iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
+}); } else if( row.gestore == "Linkem") {  colorebande = "yellow";
+       iconemarker = L.icon({
+    iconUrl: 'linkem.png',
+   iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
+}); } else if( row.gestore == "Fastweb S.p.A.") {  colorebande = "darkorange";
+       iconemarker = L.icon({
+    iconUrl: 'fastweb.png',
+   iconSize: [38, 38],iconAnchor:  [19, 38],popupAnchor:  [0, -34] // point from which the popup should open relatitudeive to the iconAnchor
 }); } else {  colorebande = "gray";
        iconemarker = L.icon({ 
     iconUrl: 'default.png',
